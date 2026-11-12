@@ -712,3 +712,8 @@ a.contact__item:hover b { color: var(--gold-hi); }
 /* clean photo: no ripple lines or haze over the face */
 .portrait.has-photo .portrait__art { display: none; }
 .portrait.has-photo::after { background: linear-gradient(180deg, transparent 78%, rgba(14,11,9,.35)); }
+.nav__mark span { white-space: nowrap; }
+.nav__mark span i { color: var(--gold); }
+@media (max-width: 640px) { .nav__mark { font-size: 17px; gap: 8px; } .nav__mark svg { width: 22px; height: 22px; } }
+@media (max-width: 380px) { .nav__mark span i { display: none; } }
+@media (max-width: 380px) { .nav__mark span i { display: inline; } .nav__mark { font-size: 16px; } }
