@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Richard Huynh · Marketing Analytics</title>
+  <meta name="description" content="Chi Hao (Richard) Huynh, marketing analytics and consumer insights. Master of Marketing at Macquarie University, Sydney.">
+  <meta name="theme-color" content="#0e0b09">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-loading">
+
+  <!-- Loader: a gold-leaf ripple draws itself -->
+  <div class="loader" aria-hidden="true">
+    <svg class="loader__ring" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="88" />
+      <circle cx="100" cy="100" r="64" />
+      <circle cx="100" cy="100" r="40" />
+    </svg>
+    <div class="loader__name">Huỳnh Chí Hào</div>
+    <div class="loader__count"><span>0</span>%</div>
+  </div>
+
+  <canvas id="art" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+
+  <header class="nav">
+    <a href="#top" class="nav__mark" aria-label="Home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18"/><circle cx="20" cy="20" r="11"/><circle cx="20" cy="20" r="4"/></svg>
+      <span>Richard</span>
+    </a>
+    <nav class="nav__links">
+      <a href="#projects">Projects</a>
+      <a href="#work">Work</a>
+      <a href="#honours">Proof</a>
+      <a href="#journey">Journey</a>
+      <a href="#contact" class="nav__cta magnetic">Let's talk</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__inner">
+        <p class="eyebrow reveal-up">Marketing analytics &amp; consumer insights <span class="dot"></span> Sydney</p>
+        <h1 class="hero__title split">
+          Finding the <em class="gold">signal</em><br>in the noise.
+        </h1>
+        <p class="hero__lede reveal-up">
+          I'm Richard, a Master of Marketing student at Macquarie and the 2025 EvettField Prize winner for marketing insights and analytics.
+          I read consumer data, find the part that matters, and turn it into strategy and content a team can act on.
+        </p>
+        <div class="hero__actions reveal-up">
+          <a href="#work" class="btn btn--gold magnetic"><span>See the work</span><i>↓</i></a>
+          <a href="https://www.linkedin.com/in/hchao1010/" target="_blank" rel="noopener" class="btn btn--ghost magnetic"><span>LinkedIn</span><i>↗</i></a>
+        </div>
+      </div>
+
+      <aside class="hero__card reveal-up" aria-label="Portrait">
+        <div class="portrait">
+          <img src="assets/richard.jpg" alt="Richard Huynh" onerror="this.remove()">
+          <svg class="portrait__art" viewBox="0 0 300 380" aria-hidden="true"></svg>
+          <span class="portrait__corner tl"></span><span class="portrait__corner br"></span>
+        </div>
+        <div class="hero__card-meta">
+          <span>Chi Hao (Richard) Huynh</span>
+          <span class="mono">Open to work · Sydney NSW</span>
+        </div>
+        <div class="seal" aria-hidden="true">
+          <svg viewBox="0 0 120 120">
+            <defs><path id="sealPath" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+            <text><textPath href="#sealPath">RISK IS ALWAYS BETTER THAN REGRET · </textPath></text>
+          </svg>
+          <b>RH</b>
+        </div>
+      </aside>
+
+      <div class="hero__scroll mono" aria-hidden="true"><span></span>Scroll</div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+      <div class="stat"><b>2025</b><span>EvettField Prize<br>best in major</span></div>
+      <div class="stat"><b><i data-count="2">0</i>×</b><span>Highest Achiever<br>unit awards</span></div>
+      <div class="stat"><b data-count="1" data-suffix="st">0</b><span>Runner-up, B2B Strategy<br>Challenge 2026</span></div>
+      <div class="stat"><b data-count="3205">0</b><span>LinkedIn<br>followers</span></div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Marketing analytics</span><i>✦</i><span>Consumer insights</span><i>✦</i><span>Brand strategy</span><i>✦</i><span>Short-form video</span><i>✦</i><span>Sponsorship</span><i>✦</i><span>Sydney</span><i>✦</i><span>Sài Gòn</span><i>✦</i>
+        <span>Marketing analytics</span><i>✦</i><span>Consumer insights</span><i>✦</i><span>Brand strategy</span><i>✦</i><span>Short-form video</span><i>✦</i><span>Sponsorship</span><i>✦</i><span>Sydney</span><i>✦</i><span>Sài Gòn</span><i>✦</i>
+      </div>
+    </div>
+
+
+    <!-- LOGO WALL -->
+    <section class="logos" aria-label="Where I have worked and studied">
+      <p class="eyebrow">Worked, studied &amp; pitched with</p>
+      <ul class="logos__row">
+        <li><span class="logos__img"><img src="assets/logos/macquarie.png" alt=""></span><b>Macquarie University</b><small>BCom · Master</small></li>
+        <li><span class="logos__img"><img src="assets/logos/acl.png" alt=""></span><b>ACL Co</b><small>Marketing</small></li>
+        <li><span class="logos__img"><img src="assets/logos/dianomi.png" alt=""></span><b>Dianomi</b><small>Strategy pitch</small></li>
+        <li><span class="logos__img"><img src="assets/logos/sgk.png" alt=""></span><b>SGK</b><small>Industry project</small></li>
+        <li><span class="logos__img"><img src="assets/logos/soul-origin.png" alt=""></span><b>Soul Origin</b><small>Team leader</small></li>
+        <li><span class="logos__img"><img src="assets/logos/mov.png" alt=""></span><b>MOV</b><small>External relations</small></li>
+        <li><span class="logos__img logos__img--navy"><img src="assets/logos/hootsuite.png" alt=""></span><b>Hootsuite Academy</b><small>Certified</small></li>
+        <li><span class="logos__img"><img src="assets/logos/salesforce.png" alt=""></span><b>Salesforce</b><small>Live brief</small></li>
+        <li><span class="logos__img"><img src="assets/logos/tradedesk.png" alt=""></span><b>The Trade Desk</b><small>Industry challenge</small></li>
+        <li><span class="logos__img"><img src="assets/logos/samsung.png" alt=""></span><b>Samsung</b><small>Industry challenge</small></li>
+        <li><span class="logos__img"><img src="assets/logos/microsoft.svg" alt=""></span><b>Microsoft</b><small>Industry challenge</small></li>
+        <li><span class="logos__img"><img src="assets/logos/jbhifi.svg" alt=""></span><b>JB Hi-Fi</b><small>Industry challenge</small></li>
+      </ul>
+      <p class="eyebrow logos__own">Brands I built</p>
+      <ul class="logos__row logos__row--own">
+        <li><span class="logos__img logos__img--sage"><span class="wm-foryou">FORYOU<small>Personal nutrition</small></span></span><b>FORYOU</b><small>Personal nutrition</small></li>
+        <li><span class="logos__img logos__img--peach"><img src="assets/logos/forme.png" alt=""></span><b>FORME</b><small>Carbon-fibre bikes</small></li>
+        <li><span class="logos__img logos__img--blush"><img src="assets/logos/lua.png" alt=""></span><b>LỤA</b><small>Intimate wellness</small></li>
+        <li><span class="logos__img"><img src="assets/logos/packjoy.png" alt=""></span><b>PackJoy</b><small>Collectible meal prep</small></li>
+      </ul>
+    </section>
+
+    <!-- SIGNAL (pinned, drives the art morph) -->
+    <section class="signal" id="method">
+      <div class="signal__pin">
+        <div class="signal__step" data-step="0">
+          <p class="eyebrow">01 · Noise</p>
+          <h2>Every brand is <em>drowning</em> in data.</h2>
+          <p>Reach, saves, retention, search, reviews, survey scores. Most of it is noise.</p>
+        </div>
+        <div class="signal__step" data-step="1">
+          <p class="eyebrow">02 · Pattern</p>
+          <h2>I look for the <em>shape</em> underneath.</h2>
+          <p>Consumer behaviour theory tells me where to look. Dashboards, social listening and SEO measurement show me what is actually there.</p>
+        </div>
+        <div class="signal__step" data-step="2">
+          <p class="eyebrow">03 · Signal</p>
+          <h2>Then I make <em>one clear choice</em>.</h2>
+          <p>A good strategy is not the most ambitious idea. It is the one that knows its constraints and can explain why it creates value.</p>
+        </div>
+        <div class="signal__axis mono" aria-hidden="true"><span>Insight</span><span>Time →</span></div>
+      </div>
+    </section>
+
+    <!-- CASE FILES: flagship projects -->
+    <section class="files" id="projects">
+      <header class="section-head">
+        <p class="eyebrow">Case files · 2026</p>
+        <h2 class="split">Five case files. <em>Built from zero.</em></h2>
+        <p class="section-head__lede reveal-up">Live briefs from global companies and brands I created end to end: the research, the strategy, the identity and, twice, a working website.</p>
+      </header>
+
+      <!-- 01 SALESFORCE -->
+      <article class="file" style="--tint: 32, 120, 255">
+        <div class="file__media">
+          <img class="file__main" src="assets/work/sff-cover.jpg" alt="Your First Win pitch cover for Salesforce" data-full="assets/work/sff-cover.jpg" loading="lazy">
+          <img class="file__float" src="assets/work/yfw-site.jpg" alt="Your First Win live website" data-full="assets/work/yfw-site.jpg" loading="lazy">
+          <span class="file__no">01</span>
+        </div>
+        <div class="file__body">
+          <div class="file__brand">
+            <span class="lg"><img src="assets/logos/salesforce.png" alt="Salesforce"></span>
+            <span class="mono">Live brief · Salesforce ANZ × Macquarie</span>
+          </div>
+          <h3>Your First Win: <em>how Salesforce wins the small businesses it rarely reaches.</em></h3>
+          <p>A live go-to-market brief handed over by a Salesforce senior director. We interviewed owners, coded the reviews they read and found Salesforce loses small firms twice: before the shortlist, and at the first decision. Our answer was one bounded first win, then grow. I took it from deck to a working website.</p>
+          <ul class="file__stats">
+            <li><b data-count="92">0</b><span>reviews coded</span></li>
+            <li><b data-count="41">0</b><span>AU pages scanned</span></li>
+            <li><b>≈<i data-count="90">0</i>K</b><span>firms in reach</span></li>
+            <li><b>A$<i data-count="19.8" data-dec="1">0</i>K</b><span>12-week test plan</span></li>
+          </ul>
+          <p class="file__role mono">Team of 5 · fieldwork, strategy, deck and live prototype</p>
+          <a class="btn btn--ghost magnetic" href="https://your-first-win.dungnguyenvbl.chatgpt.site/" target="_blank" rel="noopener"><span>Open the live site</span><i>↗</i></a>
+        </div>
+      </article>
+
+      <!-- 02 FORYOU -->
+      <article class="file" style="--tint: 120, 160, 120">
+        <div class="file__media">
+          <img class="file__main" src="assets/work/foryou-pack.jpg" alt="FORYOU packaging" data-full="assets/work/foryou-pack.jpg" loading="lazy">
+          <img class="file__float" src="assets/work/foryou-site.jpg" alt="FORYOU live website" data-full="assets/work/foryou-site.jpg" loading="lazy">
+          <span class="file__no">02</span>
+        </div>
+        <div class="file__body">
+          <div class="file__brand">
+            <span class="lg lg--sage lg--wide"><span class="wm-foryou">FORYOU<small>Personal nutrition</small></span></span>
+            <span class="mono">My brand · Digital marketing strategy</span>
+          </div>
+          <h3>FORYOU: <em>nutrition matched to you, snacks chosen by you.</em></h3>
+          <p>A direct-to-consumer personal nutrition brand for busy Australian working women. I built the case from ABS, FSANZ, Euromonitor, Semrush, Similarweb and Reddit evidence, mapped the gap against Vitable, designed the brand and the packaging, and shipped a live website with a nine-step profile.</p>
+          <ul class="file__stats">
+            <li><b data-count="9">0</b><span>step profile</span></li>
+            <li><b data-count="3">0</b><span>snack formats</span></li>
+            <li><b>A$<i data-count="3.5" data-dec="2">0</i></b><span>launch price</span></li>
+            <li><b data-count="13">0</b><span>week portfolio</span></li>
+          </ul>
+          <p class="file__role mono">Founder concept · research · brand · web build</p>
+          <a class="btn btn--ghost magnetic" href="https://foryoumktg.dungnguyenvbl.chatgpt.site/" target="_blank" rel="noopener"><span>Open the live site</span><i>↗</i></a>
+        </div>
+      </article>
+
+      <!-- 03 FORME -->
+      <article class="file" style="--tint: 150, 150, 160">
+        <div class="file__media">
+          <img class="file__main" src="assets/work/forme-store.jpg" alt="FORME bike store concept" data-full="assets/work/forme-store.jpg" loading="lazy">
+          <img class="file__float file__float--doc" src="assets/work/forme-scorecard.png" alt="FORME balanced scorecard, ranked first" data-full="assets/work/forme-scorecard.png" loading="lazy">
+          <span class="file__no">03</span>
+        </div>
+        <div class="file__body">
+          <div class="file__brand">
+            <span class="lg lg--peach lg--wide"><img src="assets/logos/forme.png" alt="FORME"></span>
+            <span class="mono">My brand · Marketplace simulation · MKTG8080</span>
+          </div>
+          <h3>FORME: <em>a premium carbon-fibre bike brand that finished #1.</em></h3>
+          <p>I ran FORME's strategy in a competitive marketplace simulation, Speed riders first and Mountain second. The defining call was to open seven cities in one quarter and accept a one-off loss while rivals held four stores or fewer. Then I pruned the weak price tiers and put about 70% of the investment pool into R&amp;D. FORME closed first in total performance, quarterly and cumulative, with $10.3M net profit in Q6.</p>
+          <ul class="file__stats">
+            <li><b>#<i data-count="1">0</i></b><span>total performance</span></li>
+            <li><b>$<i data-count="24.6" data-dec="1">0</i>M</b><span>Q6 revenue</span></li>
+            <li><b><i data-count="12">0</i>×</b><span>units, Q4→Q6</span></li>
+            <li><b data-count="86">0</b><span>/100 report grade</span></li>
+          </ul>
+          <p class="file__role mono">Strategy · pricing · R&amp;D · market entry</p>
+        </div>
+      </article>
+
+      <!-- 04 LỤA -->
+      <article class="file" style="--tint: 236, 170, 170">
+        <div class="file__media">
+          <img class="file__main" src="assets/work/lua-store.jpg" alt="LỤA flagship store concept" data-full="assets/work/lua-store.jpg" loading="lazy">
+          <img class="file__float" src="assets/work/lua-pack.jpg" alt="LỤA packaging system" data-full="assets/work/lua-pack.jpg" loading="lazy">
+          <span class="file__no">04</span>
+        </div>
+        <div class="file__body">
+          <div class="file__brand">
+            <span class="lg lg--blush"><img src="assets/logos/lua.png" alt="LỤA"></span>
+            <span class="mono">My brand · Strategic branding</span>
+          </div>
+          <h3>LỤA: <em>intimate wellness, beautifully yours.</em></h3>
+          <p>A Vietnamese-rooted intimate wellness brand named after silk. I wrote the brand platform and carried it into every touchpoint: a silk-ribbon emblem, a soft-touch packaging system made to be gifted, and a flagship store that feels like a boutique rather than a pharmacy aisle.</p>
+          <ul class="file__stats">
+            <li><b data-count="38">0</b><span>page brand book</span></li>
+            <li><b data-count="4">0</b><span>brand promises</span></li>
+            <li><b>1</b><span>flagship concept</span></li>
+          </ul>
+          <p class="file__role mono">Brand platform · identity · packaging · retail</p>
+        </div>
+      </article>
+
+      <!-- 05 PACKJOY -->
+      <article class="file" style="--tint: 120, 170, 90">
+        <div class="file__media">
+          <img class="file__main" src="assets/work/packjoy-cover.jpg" alt="PackJoy, The Zodiac Drop" data-full="assets/work/packjoy-cover.jpg" loading="lazy">
+          <img class="file__float" src="assets/work/packjoy-padthai.jpg" alt="PackJoy dragon pad thai at $6.90" data-full="assets/work/packjoy-padthai.jpg" loading="lazy">
+          <span class="file__no">05</span>
+        </div>
+        <div class="file__body">
+          <div class="file__brand">
+            <span class="lg"><img src="assets/logos/packjoy.png" alt="PackJoy"></span>
+            <span class="mono">My brand · Social media marketing</span>
+          </div>
+          <h3>PackJoy: <em>The Zodiac Drop. Eat your year.</em></h3>
+          <p>Australia's first collectible meal prep for students. Twelve world cuisines in recyclable packs, each with a zodiac mascot and a QR code to collect. I built the social strategy, the TikTok launch script, the social-listening study and the AI-made campaign film (ChatGPT, Claude, Higgsfield, Kling, Seedance, CapCut).</p>
+          <ul class="file__stats">
+            <li><b data-count="12">0</b><span>zodiac mascots</span></li>
+            <li><b data-count="12">0</b><span>world cuisines</span></li>
+            <li><b>$<i data-count="6.9" data-dec="2">0</i></b><span>per meal</span></li>
+            <li><b data-count="7">0</b><span>AI tools in the film</span></li>
+          </ul>
+          <p class="file__role mono">Social strategy · content · AI video · pitch</p>
+        </div>
+      </article>
+
+      <!-- industry briefs strip -->
+      <div class="briefs">
+        <p class="eyebrow">Also briefed by</p>
+        <ul class="briefs__row">
+          <li data-full="assets/work/ttd-samsung.jpg"><span class="lg"><img src="assets/logos/tradedesk.png" alt="The Trade Desk"></span><span class="lg"><img src="assets/logos/samsung.png" alt="Samsung"></span><div><b>The Trade Desk × Samsung</b><small>Capturing the switch-ready professional</small></div></li>
+          <li><span class="lg"><img src="assets/logos/microsoft.svg" alt="Microsoft"></span><span class="lg"><img src="assets/logos/jbhifi.svg" alt="JB Hi-Fi"></span><div><b>Microsoft × JB Hi-Fi</b><small>“Ask before you sell”: a course-aware Surface laptop advisor</small></div></li>
+          <li><span class="lg"><img src="assets/logos/dianomi.png" alt="Dianomi"></span><div><b>Dianomi</b><small>B2B strategy pitch · 1st runner-up</small></div></li>
+          <li data-full="assets/work/pace-cover.jpg"><span class="lg"><img src="assets/logos/sgk.png" alt="SGK"></span><div><b>SGK</b><small>NewCo Proposal · ShelfEdge + SmartPost</small></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="work" id="work">
+      <header class="section-head">
+        <p class="eyebrow">More work · Australia</p>
+        <h2 class="split">On the job, <em>by the numbers.</em></h2>
+        <p class="section-head__lede reveal-up">Industry projects, a pitch win, community partnerships and content. Each one starts with the result.</p>
+      </header>
+
+      <div class="work__grid">
+
+        <article class="case case--wide tilt" data-art="drop">
+          <div class="case__art"><svg viewBox="0 0 400 240"></svg></div>
+          <div class="case__body">
+            <p class="case__tag mono"><span class="lg lg--sm"><img src="assets/logos/acl.png" alt=""></span><span class="live"></span>Now · ACL Co Pty Ltd</p>
+            <h3>Marketing Assistant, luxury bathroom brand</h3>
+            <p>Brand development and social content for premium tapware in the Australian market. I plan the posts, write the captions, and build AI-assisted video workflows that take product footage to finished reels.</p>
+            <ul class="chips"><li>Brand development</li><li>Social media</li><li>AI video</li><li>Since Jun 2026</li></ul>
+          </div>
+        </article>
+
+        <article class="case tilt">
+          <div class="case__art case__art--photo">
+            <img src="assets/work/b2b-runnerup.jpg" alt="Our team with the 1st runner-up result, B2B Marketing Strategy Challenge" loading="lazy" style="object-position: 50% 30%">
+            <span class="ribbon"><i>1st</i>Runner-up<br>2026</span>
+          </div>
+          <div class="case__body">
+            <p class="case__tag mono"><span class="lg lg--sm"><img src="assets/logos/dianomi.png" alt=""></span>CH.1 · Dianomi × Macquarie</p>
+            <h3>B2B Marketing Strategy Challenge 2026</h3>
+            <p>Best Strategy Pitch, 1st Runner-up. We stopped applying frameworks and started thinking like strategists: real customer needs, commercial upside, and recommendations that would survive a boardroom.</p>
+            <ul class="chips"><li><b>1st</b> runner-up</li><li>Team of 6</li><li>Pitched to Dianomi APAC</li></ul>
+          </div>
+        </article>
+
+        <article class="case tilt">
+          <div class="case__art case__art--photo case__art--slides">
+            <img src="assets/work/pace-canvas.jpg" alt="Industry strategy canvas, to-be" data-full="assets/work/pace-canvas.jpg" loading="lazy">
+            <img src="assets/work/pace-tiers.jpg" alt="ShelfEdge tier 1 interactive shelf packaging and tier 2 pop-up activation" data-full="assets/work/pace-tiers.jpg" loading="lazy">
+            <img src="assets/work/pace-cover.jpg" alt="NewCo Proposal, Blue Ocean Strategies" data-full="assets/work/pace-cover.jpg" loading="lazy">
+          </div>
+          <div class="case__body">
+            <p class="case__tag mono"><span class="lg lg--sm"><img src="assets/logos/sgk.png" alt=""></span>CH.2 · PACE industry project · SGK</p>
+            <h3>NewCo Proposal: from packaging supplier to experience partner</h3>
+            <p>A Blue Ocean Strategy proposal for SGK. We repositioned the business across the whole consumer journey with two connected innovations. <b>ShelfEdge</b> puts interactive QR packaging and pop-up activations at the shelf. <b>SmartPost</b> turns recycling after use into a gamified ESG loyalty loop with traceable dashboards. Built on the industry map, strategy canvas, ERRC grid, buyer utility map, three tiers of non-customers, six paths and price corridor. I led the team of five and compiled the 10,000-word executive report.</p>
+            <ul class="chips"><li><b>A$109,450</b> ShelfEdge</li><li><b>A$127,450</b> SmartPost</li><li><b>≥ 50K</b> QR scans in 3 mo</li><li><b>&lt; $1.20</b> per engagement</li><li><b>≥ 10K</b> ESG dashboard views</li></ul>
+          </div>
+        </article>
+
+        <article class="case tilt" data-art="orbit">
+          <div class="case__art case__art--photo case__art--stack">
+            <img src="assets/work/mov-cultureday.jpg" alt="MOV Culture Day" loading="lazy">
+            <img src="assets/work/mov-careerhunt.jpg" alt="MOV Career Hunt workshop" loading="lazy">
+            <img src="assets/work/mov-2.jpg" alt="MOV members on campus" loading="lazy">
+          </div>
+          <div class="case__body">
+            <p class="case__tag mono"><span class="lg lg--sm"><img src="assets/logos/mov.png" alt=""></span>CH.3 · Macquarie Overseas Vietnamese</p>
+            <h3>Sponsorship and an 8-touchpoint activation</h3>
+            <p>Prospected and closed partners (Vision First, The First Shot Barista), wrote the decks and MOUs, then delivered newsletters, TikToks, posts, O-Week stalls, a workshop and Culture Day, tracked in a lightweight CRM.</p>
+            <ul class="chips"><li><b>~AUD 2.5K</b> secured</li><li><b>8</b> touchpoints</li><li>1 yr 9 mo</li></ul>
+          </div>
+        </article>
+
+        <article class="case tilt" data-art="retention">
+          <div class="case__art case__art--photo case__art--doc">
+            <img src="assets/work/edufin.png" alt="Du học Úc không khó Facebook page" loading="lazy">
+          </div>
+          <div class="case__body">
+            <p class="case__tag mono">CH.4 · EduFIN · “Du học Úc không khó”</p>
+            <h3>Short-form content for future students</h3>
+            <p>Script, shoot, edit in CapCut, caption, thumbnail, publish. Then read reach, watch time, retention, CTR and saves in Meta Insights and rework the hooks for the next round.</p>
+            <ul class="chips"><li><b>27K</b> follower page</li><li>Reels + carousels</li><li>Data-led hooks</li></ul>
+          </div>
+        </article>
+
+        <article class="case tilt" data-art="cup">
+          <div class="case__art"><svg viewBox="0 0 400 240"></svg></div>
+          <div class="case__body">
+            <p class="case__tag mono"><span class="lg lg--sm"><img src="assets/logos/soul-origin.png" alt=""></span>CH.5 · Soul Origin, Sydney</p>
+            <h3>Team Leader on the floor</h3>
+            <p>Two and a half years running shifts in a fast café: leading the team, managing daily operations and making the coffee. It is where I learnt what customers actually do, before any dashboard told me.</p>
+            <ul class="chips"><li><b>2 yrs 7 mo</b></li><li>Team leadership</li><li>Customer experience</li></ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- PROOF: certificate gallery (horizontal) -->
+    <section class="proof" id="honours">
+      <div class="proof__pin">
+        <header class="proof__head">
+          <p class="eyebrow">Honours &amp; certificates</p>
+          <h2 class="split">The wall <em>of proof.</em></h2>
+          <div class="proof__ctrl">
+            <p class="mono proof__hint">Swipe or drag sideways · click to open</p>
+            <button class="proof__btn" data-dir="-1" aria-label="Previous">←</button>
+            <button class="proof__btn" data-dir="1" aria-label="Next">→</button>
+          </div>
+        </header>
+        <div class="proof__track" tabindex="0" aria-label="Certificates, scroll sideways">
+          <figure class="frame" data-full="assets/certs/evettfield-2.jpg">
+            <div class="frame__mat"><img src="assets/certs/evettfield-2.jpg" alt="EvettField Prize certificate" loading="lazy"></div>
+            <figcaption><span class="mono">2026 · Dean's Excellence Awards</span><b>EvettField Prize</b><small>Best performance in the BCom major, Marketing Insights &amp; Analytics</small></figcaption>
+          </figure>
+          <figure class="frame frame--tall" data-full="assets/certs/mktg8015.jpg">
+            <div class="frame__mat"><img src="assets/certs/mktg8015.jpg" alt="Highest Achiever 2026 Session 1" loading="lazy"></div>
+            <figcaption><span class="mono">2026 · MKTG8015</span><b>Highest Achiever</b><small>Advanced Consumer Behaviour · 86/100</small></figcaption>
+          </figure>
+          <figure class="frame frame--photo" data-full="assets/work/b2b-runnerup.jpg">
+            <div class="frame__mat"><img src="assets/work/b2b-runnerup.jpg" alt="1st runner-up result on screen with our team" loading="lazy"></div>
+            <figcaption><span class="mono">2026 · Case challenge debrief</span><b>1st Runner-up, on the big screen</b><small>Score 85 · B2B Marketing Strategy Challenge</small></figcaption>
+          </figure>
+          <figure class="frame" data-full="assets/certs/dianomi.png">
+            <div class="frame__mat"><img src="assets/certs/dianomi.png" alt="Dianomi certificate of achievement" loading="lazy"></div>
+            <figcaption><span class="mono">2026 · Dianomi × Macquarie</span><b>Best Strategy Pitch, Runner-up</b><small>B2B Marketing Strategy Challenge</small></figcaption>
+          </figure>
+          <figure class="frame frame--tall" data-full="assets/certs/mktg3013.jpg">
+            <div class="frame__mat"><img src="assets/certs/mktg3013.jpg" alt="Highest Achiever 2025 Session 1" loading="lazy"></div>
+            <figcaption><span class="mono">2025 · MKTG3013</span><b>Highest Achiever</b><small>Marketing Media Insights · 90/100</small></figcaption>
+          </figure>
+          <figure class="frame" data-full="assets/certs/evettfield-1.jpg">
+            <div class="frame__mat"><img src="assets/certs/evettfield-1.jpg" alt="EvettField Prize on stage" loading="lazy"></div>
+            <figcaption><span class="mono">2026 · On stage</span><b>The night of the award</b><small>Macquarie Business School</small></figcaption>
+          </figure>
+          <figure class="frame" data-full="assets/certs/hootsuite.png">
+            <div class="frame__mat"><img src="assets/certs/hootsuite.png" alt="Hootsuite Academy certificate" loading="lazy"></div>
+            <figcaption><span class="mono">2026 · Hootsuite Academy</span><b>Social Media Marketing</b><small>Professional certification</small></figcaption>
+          </figure>
+          <figure class="frame" data-full="assets/certs/google-ads.png">
+            <div class="frame__mat"><img src="assets/certs/google-ads.png" alt="Google Ads Creative certification" loading="lazy"></div>
+            <figcaption><span class="mono">2026 · Google Skillshop</span><b>Google Ads Creative</b><small>Certified</small></figcaption>
+          </figure>
+          <div class="frame frame--note">
+            <span class="mono">Also</span>
+            <b>Vice-Chancellor's International Scholarship</b>
+            <small>Awarded for both the Bachelor of Commerce and the Master of Marketing.</small>
+            <span class="frame__stamp">VCIS<br>×2</span>
+          </div>
+        </div>
+        <div class="proof__bar" aria-hidden="true"><span></span></div>
+      </div>
+    </section>
+
+    <!-- JOURNEY -->
+    <section class="journey" id="journey">
+      <header class="section-head">
+        <p class="eyebrow">Journey</p>
+        <h2 class="split">From Sài Gòn <em>to Sydney.</em></h2>
+      </header>
+      <div class="skyline" aria-hidden="true"><svg viewBox="0 0 1200 260" preserveAspectRatio="xMidYMax meet"></svg></div>
+      <div class="journey__line"><svg preserveAspectRatio="none" viewBox="0 0 10 1000"><path d="M5 0 C 9 120, 1 240, 5 360 S 9 600, 5 720 S 1 900, 5 1000"/></svg></div>
+      <ol class="journey__list">
+        <li class="is-small"><span class="mono">2022 – 2023 · Sài Gòn</span><h3><img class="j-logo" src="assets/logos/ueh.png" alt="">UEH International School of Business</h3><p>Where it started: commerce foundations, Toastmasters and my first sponsorship deals.</p></li>
+        <li><span class="mono">Mar 2024 – Sep 2026</span><h3><img class="j-logo" src="assets/logos/soul-origin.png" alt="">Soul Origin · Team Leader</h3><p>Led shifts and daily operations in a busy Sydney café while studying full time.</p></li>
+        <li><span class="mono">Mar 2024 – Nov 2025</span><h3><img class="j-logo" src="assets/logos/mov.png" alt="">MOV · External Relations Specialist</h3><p>Partnerships, sponsorship and event communications for the Vietnamese student community at Macquarie.</p></li>
+        <li><span class="mono">2024 – 2025</span><h3><img class="j-logo" src="assets/logos/macquarie.png" alt="">Macquarie University · BCom</h3><p>Marketing Insights &amp; Analytics. EvettField Prize for the best performance in the major. High Distinctions in Consumer Behaviour, Marketing Project, Sales, and Customer Insights. SGK industry project.</p></li>
+        <li><span class="mono">2026 –</span><h3><img class="j-logo" src="assets/logos/macquarie.png" alt="">Macquarie University · Master of Marketing</h3><p>High Distinctions in Marketing Theory, Advanced Consumer Behaviour and Social Media Marketing. Student coordinator for the program. Runner-up in the Dianomi challenge.</p></li>
+        <li class="is-now"><span class="mono">Now</span><h3><img class="j-logo" src="assets/logos/acl.png" alt="">ACL Co · Marketing Assistant</h3><p>Brand and social for a luxury bathroom brand. Open to roles in marketing analytics, digital marketing, consumer insights and demand planning.</p></li>
+      </ol>
+    </section>
+
+    <!-- WATER -->
+    <section class="water" id="water">
+      <svg class="lotus" viewBox="0 0 400 300" aria-hidden="true"></svg>
+      <blockquote>
+        <p class="water__quote split">“Be like <em>water.</em>”</p>
+        <footer class="reveal-up">A line from Peter Chun's keynote at the 2026 Dean's Excellence Awards that I keep coming back to. Take the shape of whatever is new, and keep moving.</footer>
+      </blockquote>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <p class="eyebrow">Work with me</p>
+      <h2 class="contact__title split">Let's find <em>the signal</em> together.</h2>
+      <div class="contact__grid">
+        <a class="contact__item magnetic" href="https://www.linkedin.com/in/hchao1010/" target="_blank" rel="noopener">
+          <span class="mono">LinkedIn</span><b>Chi Hao (Richard) Huynh ↗</b>
+        </a>
+        <!-- Add your email: replace the href and the text below -->
+        <a class="contact__item magnetic" href="https://www.linkedin.com/in/hchao1010/overlay/contact-info/" target="_blank" rel="noopener">
+          <span class="mono">Email</span><b>Via LinkedIn contact ↗</b>
+        </a>
+        <div class="contact__item">
+          <span class="mono">Based in</span><b>Sydney, NSW · Hybrid</b>
+        </div>
+        <div class="contact__item">
+          <span class="mono">Open to</span><b>Analytics · Digital · Insights · Planning</b>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" aria-hidden="true"><img alt=""><button class="lightbox__close mono" aria-label="Close">Close ✕</button></div>
+
+  <footer class="foot mono">
+    <span>© <span id="year">2026</span> Chi Hao (Richard) Huynh</span>
+    <span>Risk is always better than regret.</span>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/art.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
