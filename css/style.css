@@ -717,3 +717,5 @@ a.contact__item:hover b { color: var(--gold-hi); }
 @media (max-width: 640px) { .nav__mark { font-size: 17px; gap: 8px; } .nav__mark svg { width: 22px; height: 22px; } }
 @media (max-width: 380px) { .nav__mark span i { display: none; } }
 @media (max-width: 380px) { .nav__mark span i { display: inline; } .nav__mark { font-size: 16px; } }
+button.btn { font: inherit; font-size: 14px; font-weight: 500; background: none; color: var(--egg); border: 1px solid var(--line); cursor: pointer; }
+button.btn:hover { border-color: var(--gold); }
