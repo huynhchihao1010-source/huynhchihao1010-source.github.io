@@ -706,3 +706,6 @@ a.contact__item:hover b { color: var(--gold-hi); }
 .lg--wide img { max-width: 108px; }
 .lg--sm img { max-width: 64px; max-height: 18px; }
 @media (max-width: 560px) { .logos__img img { max-width: 84px !important; max-height: 34px !important; } }
+/* award photo: keep the real colours, lighter ripple */
+.portrait img { filter: saturate(.95) contrast(1.03); object-position: 50% 20%; }
+.portrait.has-photo .portrait__art { opacity: .2; }
