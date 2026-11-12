@@ -709,3 +709,6 @@ a.contact__item:hover b { color: var(--gold-hi); }
 /* award photo: keep the real colours, lighter ripple */
 .portrait img { filter: saturate(.95) contrast(1.03); object-position: 50% 20%; }
 .portrait.has-photo .portrait__art { opacity: .2; }
+/* clean photo: no ripple lines or haze over the face */
+.portrait.has-photo .portrait__art { display: none; }
+.portrait.has-photo::after { background: linear-gradient(180deg, transparent 78%, rgba(14,11,9,.35)); }
