@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=9">
+  <link rel="stylesheet" href="css/style.css?v=10">
 </head>
 <body class="is-loading">
 
@@ -27,7 +27,7 @@
 
   <canvas id="art" aria-hidden="true"></canvas>
   <div class="grain" aria-hidden="true"></div>
-  <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"><span class="cursor__label"></span></span></div>
 
   <header class="nav">
     <a href="#top" class="nav__mark" aria-label="Home">
@@ -35,13 +35,28 @@
       <span>Chi Hao <i>(Richard)</i> Huynh</span>
     </a>
     <nav class="nav__links">
+      <span class="nav__ind" aria-hidden="true"></span>
       <a href="#projects">Projects</a>
       <a href="#work">Work</a>
       <a href="#honours">Proof</a>
       <a href="#journey">Journey</a>
       <a href="#contact" class="nav__cta magnetic">Let's talk</a>
+      <button class="nav__burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu"><i></i><i></i></button>
     </nav>
+    <span class="nav__progress" aria-hidden="true"><i></i></span>
   </header>
+
+  <!-- Mobile menu -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu__links">
+      <a href="#projects"><span class="mono">01</span>Projects</a>
+      <a href="#work"><span class="mono">02</span>Work</a>
+      <a href="#honours"><span class="mono">03</span>Proof</a>
+      <a href="#journey"><span class="mono">04</span>Journey</a>
+      <a href="#contact"><span class="mono">05</span>Contact</a>
+    </nav>
+    <p class="menu__foot mono">Open to work · Sydney NSW</p>
+  </div>
 
   <main id="top">
 
@@ -104,50 +119,57 @@
     <!-- LOGO WALL -->
     <section class="logos" aria-label="Where I have worked and studied">
       <p class="eyebrow">Worked, studied &amp; pitched with</p>
-      <ul class="logos__row">
-        <li><span class="logos__img"><img src="assets/logos/macquarie.png" alt=""></span><b>Macquarie University</b><small>BCom · Master</small></li>
-        <li><span class="logos__img"><img src="assets/logos/acl.png" alt=""></span><b>ACL Co</b><small>Marketing</small></li>
-        <li><span class="logos__img"><img src="assets/logos/dianomi.png" alt=""></span><b>Dianomi</b><small>Strategy pitch</small></li>
-        <li><span class="logos__img"><img src="assets/logos/sgk.png" alt=""></span><b>SGK</b><small>Industry project</small></li>
-        <li><span class="logos__img"><img src="assets/logos/soul-origin.png" alt=""></span><b>Soul Origin</b><small>Team leader</small></li>
-        <li><span class="logos__img"><img src="assets/logos/mov.png" alt=""></span><b>MOV</b><small>External relations</small></li>
-        <li><span class="logos__img logos__img--navy"><img src="assets/logos/hootsuite.png" alt=""></span><b>Hootsuite Academy</b><small>Certified</small></li>
-        <li><span class="logos__img"><img src="assets/logos/salesforce.png" alt=""></span><b>Salesforce</b><small>Live brief</small></li>
-        <li><span class="logos__img"><img src="assets/logos/tradedesk.png" alt=""></span><b>The Trade Desk</b><small>Industry challenge</small></li>
-        <li><span class="logos__img"><img src="assets/logos/samsung.png" alt=""></span><b>Samsung</b><small>Industry challenge</small></li>
-        <li><span class="logos__img"><img src="assets/logos/microsoft.svg" alt=""></span><b>Microsoft</b><small>Industry challenge</small></li>
-        <li><span class="logos__img"><img src="assets/logos/jbhifi.svg" alt=""></span><b>JB Hi-Fi</b><small>Industry challenge</small></li>
-        <li><span class="logos__img"><img src="assets/logos/adidas.png" alt=""></span><b>adidas</b><small>Industry challenge</small></li>
-        <li><span class="logos__img"><img src="assets/logos/jdsports.png" alt=""></span><b>JD Sports</b><small>Industry challenge</small></li>
-      </ul>
+      <div class="logo-loop">
+        <ul class="logo-loop__track">
+          <li class="logo-chip"><span class="logos__img"><img src="assets/logos/macquarie.png" alt=""></span><span><b>Macquarie University</b><small>BCom · Master</small></span></li>
+          <li class="logo-chip"><span class="logos__img"><img src="assets/logos/acl.png" alt=""></span><span><b>ACL Co</b><small>Marketing</small></span></li>
+          <li class="logo-chip"><span class="logos__img"><img src="assets/logos/dianomi.png" alt=""></span><span><b>Dianomi</b><small>Strategy pitch</small></span></li>
+          <li class="logo-chip"><span class="logos__img"><img src="assets/logos/sgk.png" alt=""></span><span><b>SGK</b><small>Industry project</small></span></li>
+          <li class="logo-chip"><span class="logos__img"><img src="assets/logos/soul-origin.png" alt=""></span><span><b>Soul Origin</b><small>Team leader</small></span></li>
+          <li class="logo-chip"><span class="logos__img"><img src="assets/logos/mov.png" alt=""></span><span><b>MOV</b><small>External relations</small></span></li>
+          <li class="logo-chip"><span class="logos__img logos__img--navy"><img src="assets/logos/hootsuite.png" alt=""></span><span><b>Hootsuite Academy</b><small>Certified</small></span></li>
+        </ul>
+      </div>
+      <div class="logo-loop logo-loop--rev">
+        <ul class="logo-loop__track">
+          <li class="logo-chip"><span class="logos__img"><img src="assets/logos/salesforce.png" alt=""></span><span><b>Salesforce</b><small>Live brief</small></span></li>
+          <li class="logo-chip"><span class="logos__img"><img src="assets/logos/tradedesk.png" alt=""></span><span><b>The Trade Desk</b><small>Industry challenge</small></span></li>
+          <li class="logo-chip"><span class="logos__img"><img src="assets/logos/samsung.png" alt=""></span><span><b>Samsung</b><small>Industry challenge</small></span></li>
+          <li class="logo-chip"><span class="logos__img"><img src="assets/logos/microsoft.svg" alt=""></span><span><b>Microsoft</b><small>Industry challenge</small></span></li>
+          <li class="logo-chip"><span class="logos__img"><img src="assets/logos/jbhifi.svg" alt=""></span><span><b>JB Hi-Fi</b><small>Industry challenge</small></span></li>
+          <li class="logo-chip"><span class="logos__img"><img src="assets/logos/adidas.png" alt=""></span><span><b>adidas</b><small>Industry challenge</small></span></li>
+          <li class="logo-chip"><span class="logos__img"><img src="assets/logos/jdsports.png" alt=""></span><span><b>JD Sports</b><small>Industry challenge</small></span></li>
+        </ul>
+      </div>
       <p class="eyebrow logos__own">Brands I built</p>
-      <ul class="logos__row logos__row--own">
-        <li><span class="logos__img logos__img--sage"><span class="wm-foryou">FORYOU<small>Personal nutrition</small></span></span><b>FORYOU</b><small>Personal nutrition</small></li>
-        <li><span class="logos__img logos__img--peach"><img src="assets/logos/forme.png" alt=""></span><b>FORME</b><small>Carbon-fibre bikes</small></li>
-        <li><span class="logos__img logos__img--blush"><img src="assets/logos/lua.png" alt=""></span><b>LỤA</b><small>Intimate wellness</small></li>
-        <li><span class="logos__img"><img src="assets/logos/packjoy.png" alt=""></span><b>PackJoy</b><small>Collectible meal prep</small></li>
-      </ul>
+      <div class="built">
+        <a class="built__card" href="#file-foryou" style="--tint: 120, 160, 120"><span class="logos__img logos__img--sage"><span class="wm-foryou">FORYOU<small>Personal nutrition</small></span></span><b>FORYOU</b><small>Personal nutrition</small><span class="built__go mono">Case file 02 →</span></a>
+        <a class="built__card" href="#file-forme" style="--tint: 244, 160, 90"><span class="logos__img logos__img--peach"><img src="assets/logos/forme.png" alt=""></span><b>FORME</b><small>Carbon-fibre bikes</small><span class="built__go mono">Case file 03 →</span></a>
+        <a class="built__card" href="#file-lua" style="--tint: 236, 170, 170"><span class="logos__img logos__img--blush"><img src="assets/logos/lua.png" alt=""></span><b>LỤA</b><small>Intimate wellness</small><span class="built__go mono">Case file 04 →</span></a>
+        <a class="built__card" href="#file-packjoy" style="--tint: 120, 170, 90"><span class="logos__img"><img src="assets/logos/packjoy.png" alt=""></span><b>PackJoy</b><small>Collectible meal prep</small><span class="built__go mono">Case file 05 →</span></a>
+      </div>
     </section>
 
     <!-- SIGNAL (pinned, drives the art morph) -->
     <section class="signal" id="method">
       <div class="signal__pin">
-        <div class="signal__step" data-step="0">
+        <div class="signal__step" data-step="0" data-n="01">
           <p class="eyebrow">01 · Noise</p>
           <h2>Every brand is <em>drowning</em> in data.</h2>
           <p>Reach, saves, retention, search, reviews, survey scores. Most of it is noise.</p>
         </div>
-        <div class="signal__step" data-step="1">
+        <div class="signal__step" data-step="1" data-n="02">
           <p class="eyebrow">02 · Pattern</p>
           <h2>I look for the <em>shape</em> underneath.</h2>
           <p>Consumer behaviour theory tells me where to look. Dashboards, social listening and SEO measurement show me what is actually there.</p>
         </div>
-        <div class="signal__step" data-step="2">
+        <div class="signal__step" data-step="2" data-n="03">
           <p class="eyebrow">03 · Signal</p>
           <h2>Then I make <em>one clear choice</em>.</h2>
           <p>A good strategy is not the most ambitious idea. It is the one that knows its constraints and can explain why it creates value.</p>
         </div>
         <div class="signal__axis mono" aria-hidden="true"><span>Insight</span><span>Time →</span></div>
+        <ol class="signal__rail mono" aria-hidden="true"><i></i><li>Noise</li><li>Pattern</li><li>Signal</li></ol>
       </div>
     </section>
 
@@ -185,7 +207,7 @@
       </article>
 
       <!-- 02 FORYOU -->
-      <article class="file" style="--tint: 120, 160, 120">
+      <article class="file" id="file-foryou" style="--tint: 120, 160, 120">
         <div class="file__media">
           <img class="file__main" src="assets/work/foryou-pack.jpg" alt="FORYOU packaging" data-full="assets/work/foryou-pack.jpg" loading="lazy">
           <img class="file__float" src="assets/work/foryou-site.jpg" alt="FORYOU live website" data-full="assets/work/foryou-site.jpg" loading="lazy">
@@ -210,7 +232,7 @@
       </article>
 
       <!-- 03 FORME -->
-      <article class="file" style="--tint: 150, 150, 160">
+      <article class="file" id="file-forme" style="--tint: 150, 150, 160">
         <div class="file__media">
           <img class="file__main" src="assets/work/forme-store.jpg" alt="FORME bike store concept" data-full="assets/work/forme-store.jpg" loading="lazy">
           <img class="file__float file__float--doc" src="assets/work/forme-scorecard.png" alt="FORME balanced scorecard, ranked first" data-full="assets/work/forme-scorecard.png" loading="lazy">
@@ -235,7 +257,7 @@
       </article>
 
       <!-- 04 LỤA -->
-      <article class="file" style="--tint: 236, 170, 170">
+      <article class="file" id="file-lua" style="--tint: 236, 170, 170">
         <div class="file__media">
           <img class="file__main" src="assets/work/lua-store.jpg" alt="LỤA flagship store concept" data-full="assets/work/lua-store.jpg" loading="lazy">
           <img class="file__float" src="assets/work/lua-pack.jpg" alt="LỤA packaging system" data-full="assets/work/lua-pack.jpg" loading="lazy">
@@ -258,7 +280,7 @@
       </article>
 
       <!-- 05 PACKJOY -->
-      <article class="file" style="--tint: 120, 170, 90">
+      <article class="file" id="file-packjoy" style="--tint: 120, 170, 90">
         <div class="file__media">
           <img class="file__main" src="assets/work/packjoy-cover.jpg" alt="PackJoy, The Zodiac Drop" data-full="assets/work/packjoy-cover.jpg" loading="lazy">
           <img class="file__float" src="assets/work/packjoy-padthai.jpg" alt="PackJoy dragon pad thai at $6.90" data-full="assets/work/packjoy-padthai.jpg" loading="lazy">
@@ -495,8 +517,19 @@
 
     <!-- CONTACT -->
     <section class="contact" id="contact">
-      <p class="eyebrow">Work with me</p>
-      <h2 class="contact__title split">Let's find <em>the signal</em> together.</h2>
+      <div class="contact__top">
+        <div class="contact__head">
+          <p class="eyebrow">Work with me</p>
+          <h2 class="contact__title split">Let's find <em>the signal</em> together.</h2>
+        </div>
+        <a class="orb magnetic" href="https://www.linkedin.com/in/hchao1010/" target="_blank" rel="noopener" aria-label="Let's talk on LinkedIn">
+          <svg viewBox="0 0 200 200" aria-hidden="true">
+            <defs><path id="orbPath" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs>
+            <text><textPath href="#orbPath" textLength="500" lengthAdjust="spacing">OPEN TO WORK · MARKETING ANALYTICS · SYDNEY · </textPath></text>
+          </svg>
+          <b>Let's<br>talk <i>↗</i></b>
+        </a>
+      </div>
       <div class="contact__grid">
         <a class="contact__item magnetic" href="https://www.linkedin.com/in/hchao1010/" target="_blank" rel="noopener">
           <span class="mono">LinkedIn</span><b>Chi Hao (Richard) Huynh ↗</b>
@@ -513,6 +546,8 @@
         </div>
       </div>
     </section>
+
+    <div class="bigname" aria-hidden="true"><span data-text="Richard Huynh">Richard Huynh</span></div>
   </main>
 
   <div class="lightbox" aria-hidden="true"><img alt=""><button class="lightbox__close mono" aria-label="Close">Close ✕</button></div>
@@ -520,12 +555,14 @@
   <footer class="foot mono">
     <span>© <span id="year">2026</span> Chi Hao (Richard) Huynh</span>
     <span>Risk is always better than regret.</span>
+    <a href="#top" class="foot__top">Back to top ↑</a>
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="js/art.js?v=9"></script>
-  <script src="js/main.js?v=9"></script>
+  <script src="js/art.js?v=10"></script>
+  <script src="js/main.js?v=10"></script>
+  <script src="js/fx.js?v=10"></script>
 </body>
 </html>

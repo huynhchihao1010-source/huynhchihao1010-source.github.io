@@ -72,7 +72,8 @@
     t += 16;
     morph += (morphTarget - morph) * 0.06;
     opacity += (opacityTarget - opacity) * 0.08;
-    canvas.style.opacity = opacity.toFixed(3);
+    // phones: the flakes run behind every paragraph, so keep them quieter
+    canvas.style.opacity = (opacity * (W < 700 ? 0.55 : 1)).toFixed(3);
 
     const gather = smooth(0.02, 0.55, morph);      // flakes pulled to the plot
     const clarity = smooth(0.5, 1, morph);         // scatter tightens to a line
